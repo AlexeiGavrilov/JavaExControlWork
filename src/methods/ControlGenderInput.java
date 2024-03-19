@@ -5,7 +5,7 @@ import exeptions.IncorrectGender;
 
 public class ControlGenderInput {
 
-    public static void checkGender(String[] s) {
+    public static String checkGender(String[] s) {
         int right = 1;
         String gender = null;
         for (int i = 0; i < s.length; i++) {
@@ -14,6 +14,8 @@ public class ControlGenderInput {
         if (gender==null) throw new IncorrectGender();
         if (gender.toLowerCase().equals("f") || gender.toLowerCase().equals("m"));
         else throw new IncorrectGender();
+
+        return gender;
     }
 
 }

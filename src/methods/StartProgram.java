@@ -1,5 +1,6 @@
 package methods;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StartProgram {
@@ -9,11 +10,10 @@ public class StartProgram {
                 "номер телефона в формате 11 цифр и пол через пробел");
         Scanner sc = new Scanner(System.in);
         String first = sc.nextLine();
-        String[] s = first.split(" ");
-        ControlInputCounts.CheckInputUser(s);
-        ControlDate.checkDate(s);
-        ControlGenderInput.checkGender(s);
-        ControlPhoneNumber.checkPhoneNumber(s);
+        PreparingString.prepare(first);
+
+
+
 
 
 

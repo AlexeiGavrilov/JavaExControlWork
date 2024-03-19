@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ControlDate {
 
-    public static void checkDate(String[] s) {
+    public static String checkDate(String[] s) {
         int right = 10;
         String date = null;
         for (int i = 0; i < s.length; i++) {
@@ -32,6 +32,8 @@ public class ControlDate {
         if (resultList[0]>31 || resultList[0] <=0 ) throw new IncorrectDateFormat();
         if (resultList[1]>12 || resultList[1] <=0) throw new IncorrectDateFormat();
         if (resultList[2] <0) throw new IncorrectDateFormat();
+
+        return date;
 
     }
 
