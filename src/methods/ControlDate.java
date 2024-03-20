@@ -2,14 +2,13 @@ package methods;
 
 import exeptions.IncorrectDateFormat;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.time.Year;
+import java.util.*;
 
 public class ControlDate {
 
     public static String checkDate(String[] s) {
+
         int right = 10;
         String date = null;
         for (int i = 0; i < s.length; i++) {
@@ -31,7 +30,7 @@ public class ControlDate {
         }
         if (resultList[0]>31 || resultList[0] <=0 ) throw new IncorrectDateFormat();
         if (resultList[1]>12 || resultList[1] <=0) throw new IncorrectDateFormat();
-        if (resultList[2] <0) throw new IncorrectDateFormat();
+        if (resultList[2] <1900 || resultList[2]>2024) throw new IncorrectDateFormat();
 
         return date;
 

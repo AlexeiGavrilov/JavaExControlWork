@@ -19,12 +19,8 @@ public class PreparingString {
                 j++;
             }
         }
-//        String textForFile = result[0] + result[1] + result[2] + date + phone + gender;
         String textForFile = String.format("%s %s %s %s %s %s",result[0],result[1],result[2],date,phone,gender);
-
         String pathname = result[0]+"."+"txt";
-        System.out.println(textForFile);
-        System.out.println(pathname);
         WriteInFile.write(pathname,textForFile);
 
 
